@@ -33,7 +33,7 @@ export default ({ config, db }) => resource({
 				key.sku = product.sku
 			}
 			// console.log(key)
-			
+
 			if (!config.tax.usePlatformTotals) {
 				if (!hmac.verify(key, product.sgn, config.objHashSecret)) {
 					console.error('Invalid hash for ' + product.sku + ': ' + product.sgn)
